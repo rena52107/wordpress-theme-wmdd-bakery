@@ -1,0 +1,142 @@
+/*
+Theme Name: WMDD Bakery
+Author: Rena Sakata
+Description: WMDD Bakery is a theme designed responsive Wordpress Theme for your recipes.
+Requires PHP: 5.6
+Version: 1.1
+Text Domain: renasakata4840
+*/
+
+
+.content-padding-responsive {
+    padding: 32px;
+}
+
+.wp-block-navigation-item__label:hover {
+    color: #fff;
+}
+
+/******************************/
+/******** index page **********/
+/******************************/
+
+.wmdd-bakery-post-list {
+    margin: 8px;
+    padding: 16px;
+    border: 1px solid var(--wp--preset--color--secondary);
+    box-shadow: 8px 8px var(--wp--preset--color--secondary);
+}
+
+a {
+    padding: 0.3em 1em;
+    border-radius: 1000px;
+    transition: all 0.3s;
+    transform: scale(0.95);
+}
+
+a:has(img) {
+    padding: 0.3em;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: #fff;
+    background-color: var(--wp--preset--color--secondary);
+    transform: scale(1);
+}
+
+/* Button */
+.wp-block-button__link:hover {
+    color: #fff;
+    background-color: var(--wp--preset--color--secondary);
+}
+
+/******************************/
+/********** 404 page **********/
+/******************************/
+#image-404-page {
+    animation: flutterDown 1s linear;
+    clip-path: ellipse(50% 50%);
+}
+
+#image-404-page > div > p {
+    background-image: linear-gradient(to bottom right, #fff, var(--wp--preset--color--secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* 404 image animation */
+@keyframes flutterDown {
+    0% {
+        transform: rotate(-10deg);
+        transform: translateY(-100%);
+    }
+
+    70% {
+        transform: rotate(-10deg);
+    }
+
+    85% {
+        transform: rotate(10deg);
+    }
+
+    90% {
+        transform: rotate(-5deg);
+    }
+
+    93% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/******************************/
+/*** Category and Tag list ****/
+/******************************/
+.categories-list-ul, .page-list-ul {
+    list-style: square;
+}
+
+.categories-list-ul li,
+.page-list-ul li {
+    margin: 1rem 0;
+}
+
+/******************************/
+/********* Search box *********/
+/******************************/
+.wmmd-bakery-search-box > div > button {
+    padding: 0.8em 1.6em;
+    border-radius: 1000px;
+    transition: all .3s;
+}
+
+/**********************************/
+/********* Responsiveness *********/
+/**********************************/
+/* For tablet */
+@media screen and (max-width: 699px) {
+    .wp-block-site-title a {
+        font-size: 54px;
+    }
+}
+
+/* For mobile */
+@media screen and (max-width: 399px){
+    .content-padding-responsive {
+            padding: 32px;
+        }
+
+    .wp-block-site-title a {
+        font-size: 40px;
+    }
+
+    h1 .wp-block-query-title {
+        font-size: 16px;
+    }
+}
